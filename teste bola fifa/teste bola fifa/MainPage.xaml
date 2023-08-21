@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="teste_bola_fifa.MainPage">
+
+    <StackLayout BackgroundColor="Black">
+        <Frame VerticalOptions="StartAndExpand" BackgroundColor="#2196F3" Padding="24" CornerRadius="0" HeightRequest="120">
+            <Image VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Source="cr7.png">
+                <Image.GestureRecognizers>
+                    <DragGestureRecognizer
+                        CanDrag="True"
+                        DragStarting="DragGestureRecognizer_DragStarting"> <!-- aonde começa a imagem -->
+                        
+                    </DragGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+        </Frame>
+        <Frame VerticalOptions="EndAndExpand"
+               BackgroundColor="Green"
+               HeightRequest="170">
+            <Frame.GestureRecognizers>
+                <DropGestureRecognizer
+                    AllowDrop="True"
+                    Drop="DropGestureRecognizer_Drop"></DropGestureRecognizer> <!-- aonde recebe a imagem -->
+            </Frame.GestureRecognizers>
+            
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
