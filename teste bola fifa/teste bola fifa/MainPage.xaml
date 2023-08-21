@@ -4,7 +4,22 @@
              x:Class="teste_bola_fifa.MainPage">
 
     <StackLayout BackgroundColor="Black">
-        <Frame VerticalOptions="StartAndExpand" BackgroundColor="#2196F3" Padding="24" CornerRadius="0" HeightRequest="120">
+        <Frame x:Name="azul" 
+            VerticalOptions="StartAndExpand" BackgroundColor="#2196F3" Padding="24" CornerRadius="0" HeightRequest="120">
+            <Frame.GestureRecognizers>
+                <DropGestureRecognizer
+                    AllowDrop="True"
+                    Drop="DropGestureRecognizer_Drop_1">
+                    
+                </DropGestureRecognizer>
+            </Frame.GestureRecognizers>
+        </Frame>
+            <Frame x:Name="preto"
+                BackgroundColor="Transparent"
+               VerticalOptions="Center"
+               Padding="24"
+               CornerRadius="0"
+               HeightRequest="120">
             <Image VerticalOptions="Center"
                    HorizontalOptions="Center"
                    HeightRequest="100"
@@ -13,13 +28,14 @@
                 <Image.GestureRecognizers>
                     <DragGestureRecognizer
                         CanDrag="True"
-                        DragStarting="DragGestureRecognizer_DragStarting"> <!-- aonde começa a imagem -->
-                        
+                        DragStarting="DragGestureRecognizer_DragStarting_1">
+
                     </DragGestureRecognizer>
                 </Image.GestureRecognizers>
             </Image>
         </Frame>
-        <Frame VerticalOptions="EndAndExpand"
+        <Frame x:Name="verde"
+            VerticalOptions="EndAndExpand"
                BackgroundColor="Green"
                HeightRequest="170">
             <Frame.GestureRecognizers>
